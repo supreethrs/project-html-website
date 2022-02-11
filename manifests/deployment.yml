@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: supreethrsprojecthtmlwebsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supreethrsprojecthtmlwebsite
+  template:
+    metadata:
+      labels:
+        app: supreethrsprojecthtmlwebsite 
+    spec:
+      containers:
+        - name: supreethrsprojecthtmlwebsite 
+          image: supreethtraining.azurecr.io/supreethrsprojecthtmlwebsite
+          ports:
+          - containerPort: 80
